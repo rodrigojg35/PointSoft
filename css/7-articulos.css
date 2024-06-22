@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #090661, #f02a93);
+    color: white; 
+    
+    margin: 0;
+    padding: 0;
+}
+
+.modal-content {
+    color: black; /* Color de texto negro */
+    text-shadow: none; /* Sin sombra de texto */
+}
+
+h1 {
+    text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+header {
+    background: linear-gradient(to right, #a7266b, #030134);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+    display: flex; /* Usar un diseño flexbox para las secciones */
+    justify-content: space-between; /* Distribuir las secciones a lo largo del encabezado */
+}
+
+/* Estilos para la sección izquierda (botón Cerrar Sesión) */
+.left-section {
+    flex: 1; /* Ocupa todo el espacio disponible en la izquierda */
+}
+
+
+
+/* Estilos para el botón Cerrar Sesión */
+.boton-regresar {
+    background-color: black; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 10px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.center-section {
+    flex: 1; /* Ocupa todo el espacio disponible en el centro */
+    text-align: center; /* Centrar el contenido */
+}
+
+/* Estilos para el título */
+h1 {
+    margin: 0; /* Elimina el margen superior del título */
+}
+
+/* Estilos para la sección derecha (botón Abrir Caja) */
+.right-section {
+    flex: 1; /* Ocupa todo el espacio disponible en la derecha */
+    text-align: right; /* Alinear el contenido a la derecha */
+}
+
+.boton-agregar {
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+
+}
+
+.producto{
+    background: linear-gradient(to right, #080640, #0d8c8e);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.boton-añadir-producto {
+    background-color:royalblue; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 10px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    margin-right: 70px;
+}
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: start; /* Alinea los elementos en la parte superior del contenedor */
+    padding: 0 80px; /* Añade margen izquierdo y derecho a los productos */
+}
+
+.producto {
+    width: calc(30% - 20px); /* El 30% asegura tres productos por fila */
+    margin: 10px 0; /* Margen en la parte superior e inferior de los elementos */
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 190px;
+    max-height: 500px;
+    box-shadow: 3px 3px 0px 0px black, 
+                -3px -3px 0px 0px black, 
+                3px -3px 0px 0px black, 
+                -3px 3px 0px 0px black;
+    margin-bottom: 2px;
+    
+}
+
+
+.nombre-producto {
+    font-family: "Constantia", serif;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 23px;
+}
+
+.nombre-producto-detalles {
+    font-family: "Constantia", serif;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 27px;
+    line-height: 26px;
+}
+
+.precio {
+    color: #ff0000;
+    font-size: 18px;
+}
+
+.descripcion-articulo-title {
+    color: #ff0000;
+    font-size: 16px;
+}
+
+.descripcion-articulo-body {
+    font-style: italic;
+    color:#333;
+    font-size: 14px;
+}
+
+.existencia {
+    color: #008000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.existencia2 {
+    color: gray;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.existencia3 {
+    color:darkorange;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.modal-title {
+    font-size: 25px;
+}
+
+.modal-desc{
+    font-size: 18px;
+}
+
+
+
+.imagen-producto {
+    border: 2px solid black;
+    width: 190px; /* Ajusta el tamaño de las imágenes al 100% del ancho del producto */
+    height: 250px; /* Ajusta el tamaño de las imágenes al 100% del ancho del producto */
+    display: block; /* Hace que la imagen se comporte como un bloque */
+    margin: auto;
+}
+
+.imagen-producto2 {
+    width: 190px; /* Ajusta el tamaño de las imágenes al 100% del ancho del producto */
+    height: 250px; /* Ajusta el tamaño de las imágenes al 100% del ancho del producto */
+    display: block; /* Hace que la imagen se comporte como un bloque */
+    margin: auto;
+}
+
+.sku {
+    color: #777777; /* Color gris */
+}
+
+.producto-body {
+    margin-left: 5px
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000; /* Borde negro */
+    border-radius: 5px;
+}
+
+input[type="button"] {
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #333333; /* Cambio de color al pasar el mouse */
+}

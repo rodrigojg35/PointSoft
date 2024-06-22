@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #090661, #f02a93);
+    color: white; 
+
+    margin: 0;
+    padding: 0;
+}
+
+.modal-content {
+    color: black; /* Color de texto negro */
+    text-shadow: none; /* Sin sombra de texto */
+}
+
+h1,h2 {
+    text-align: center;
+}
+
+
+
+
+header {
+    background: linear-gradient(to right, #a7266b, #030134);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+    display: flex; /* Usar un diseño flexbox para las secciones */
+    justify-content: space-between; /* Distribuir las secciones a lo largo del encabezado */
+}
+
+/* Estilos para la sección izquierda (botón Cerrar Sesión) */
+.left-section {
+    flex: 1; /* Ocupa todo el espacio disponible en la izquierda */
+}
+
+/* Estilos para el botón Cerrar Sesión */
+.boton-regresar {
+    background-color: black; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 10px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.boton-detalles {
+    background-color: darkblue; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 5px 10px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    margin-left: 20px;
+}
+/* Estilos para la sección central (título) */
+.center-section {
+    flex: 1; /* Ocupa todo el espacio disponible en el centro */
+    text-align: center; /* Centrar el contenido */
+}
+
+/* Estilos para el título */
+h1 {
+    margin: 0; /* Elimina el margen superior del título */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* Estilos para la sección derecha (botón Abrir Caja) */
+.right-section {
+    flex: 1; /* Ocupa todo el espacio disponible en la derecha */
+    text-align: right; /* Alinear el contenido a la derecha */
+}
+
+/* Estilos para el botón Abrir Caja */
+.boton-abrir-caja {
+    background-color: red; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 10px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Estilos para el ícono de la caja registradora */
+i.fas.fa-cash-register {
+    margin-right: 5px; /* Margen derecho entre el ícono y el texto del botón */
+}
+
+.boton-carrito {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 12px;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-left: 200px;
+}
+
+.formulario {
+    width: 100%;
+    padding: 30px;
+    padding-left: 15px;
+    padding-block: 30px;
+
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-right: 400px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000; /* Borde negro */
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #333333; /* Cambio de color al pasar el mouse */
+}
+
+.tabla {
+    background-color: white;
+    color: black;
+    border: #000;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 20px;
+    text-align: center; /* Centra el contenido de la tabla horizontalmente */
+}
+
+.table th{
+    text-align: center;
+}
+
+td:nth-child(1), th:nth-child(1) {
+    width: 5% /* Ajusta el ancho como desees */
+}
+
+td:nth-child(7), th:nth-child(7) {
+    width: 10px; /* Ajusta el ancho como desees */
+}
+
+.cuadro {
+    background: linear-gradient(to right, #a7266b, #030134);
+    border: 2px solid #000; /* Borde de 1 píxel de grosor, color negro */
+    padding: 10px; /* Añade espacio interno para que no esté pegado al texto */
+    margin: 5px; /* Añade espacio externo entre los cuadros */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.cuadroTotal {
+    background: linear-gradient(to right, #a7266b, #030134);
+    border: 2px solid red; /* Borde de 1 píxel de grosor, color negro */
+    padding: 10px; /* Añade espacio interno para que no esté pegado al texto */
+    margin: 5px; /* Añade espacio externo entre los cuadros */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

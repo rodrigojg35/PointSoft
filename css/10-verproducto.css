@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: gray; /* Fondo blanco */
+    background: linear-gradient(45deg, transparent 25%, rgba(173, 216, 230, 0.9) 25%, rgba(173, 216, 230, 0.4) 50%, transparent 50%, transparent 75%, rgba(173, 216, 230, 0.4) 75%, rgba(173, 216, 230, 0.4));
+    background-size: 200px 800px;
+    color: #000000; /* Texto negro */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333333;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+    display: flex; /* Usar un diseño flexbox para las secciones */
+    justify-content: space-between; /* Distribuir las secciones a lo largo del encabezado */
+}
+
+/* Estilos para la sección izquierda (botón Cerrar Sesión) */
+.left-section {
+    flex: 1; /* Ocupa todo el espacio disponible en la izquierda */
+}
+
+/* Estilos para el botón Cerrar Sesión */
+.boton-regresar {
+    background-color: black; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 10px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.center-section {
+    flex: 1; /* Ocupa todo el espacio disponible en el centro */
+    text-align: center; /* Centrar el contenido */
+}
+
+/* Estilos para el título */
+h1 {
+    margin: 0; /* Elimina el margen superior del título */
+}
+
+/* Estilos para la sección derecha (botón Abrir Caja) */
+.right-section {
+    flex: 1; /* Ocupa todo el espacio disponible en la derecha */
+    text-align: right; /* Alinear el contenido a la derecha */
+}
+
+.producto-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000000; /* Borde negro */
+    border-radius: 5px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.imagen-producto {
+    max-width: 40%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.informacion-producto {
+    flex-grow: 1;
+}
+
+.nombre-producto {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sku {
+    color: #777777; /* Color gris */
+}
+
+.precio {
+    font-size: 20px;
+    color: #ff0000; /* Color rojo para el precio */
+}
+
+.existencia {
+    font-size: 18px;
+    color: #008000; /* Color verde para la existencia */
+}
+
+.existencia2 {
+    color: gray;
+    font-size: 18px;
+}

@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #090661, #f02a93);
+    color: white; 
+    margin: 0;
+    padding: 0;
+}
+
+.modal-content {
+    color: black; /* Color de texto negro */
+    text-shadow: none; /* Sin sombra de texto */
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(to right, #a7266b, #030134);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+    display: flex; /* Usar un diseño flexbox para las secciones */
+    justify-content: space-between; /* Distribuir las secciones a lo largo del encabezado */
+}
+
+/* Estilos para la sección izquierda (botón Cerrar Sesión) */
+.left-section {
+    flex: 1; /* Ocupa todo el espacio disponible en la izquierda */
+}
+
+/* Estilos para el botón Cerrar Sesión */
+.boton-regresar {
+    background-color: black; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 10px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.boton-añadir {
+    background-color: black; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 10px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+}
+
+/* Estilos para la sección central (título) */
+.center-section {
+    flex: 1; /* Ocupa todo el espacio disponible en el centro */
+    text-align: center; /* Centrar el contenido */
+}
+
+/* Estilos para el título */
+h1 {
+    margin: 0; /* Elimina el margen superior del título */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* Estilos para la sección derecha (botón Abrir Caja) */
+.right-section {
+    flex: 1; /* Ocupa todo el espacio disponible en la derecha */
+    text-align: right; /* Alinear el contenido a la derecha */
+}
+
+/* Estilos para el botón Abrir Caja */
+.boton-abrir-caja {
+    background-color: red; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 10px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Estilos para el ícono de la caja registradora */
+i.fas.fa-cash-register {
+    margin-right: 5px; /* Margen derecho entre el ícono y el texto del botón */
+}
+
+.boton-carrito {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 12px;
+}
+
+#paneles {
+    display: flex;
+    flex: 1; /* Utiliza todo el espacio restante */
+}
+
+/* Panel izquierdo */
+#panel-izquierdo {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-left: 120px;
+}
+
+/* Panel derecho */
+#panel-derecho {
+    flex: 1;
+
+    padding: 20px;
+    margin-left: -90px;
+}
+
+
+.formulario {
+
+    background-color: #f0f0f0;
+    color: #000000;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1.5px solid #000000;
+    border-radius: 5px;
+    
+    width: 100%;
+    padding: 30px;
+    padding-left: 15px;
+    padding-block: 30px;
+
+    border-radius: 5px;
+    margin-right: 380px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #000000; /* Borde negro */
+    border-radius: 5px;
+}
+
+input[type="tel"] {
+    width: 30%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #000000; /* Borde negro */
+    border-radius: 5px;
+}
+
+input[type="button"] {
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #333333; /* Cambio de color al pasar el mouse */
+}
+
+.tabla {
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 20px;
+    text-align: center; /* Centra el contenido de la tabla horizontalmente */
+}
+
+.existencia {
+    font-size: 18px;
+    color: #008000; /* Color verde para la existencia */
+}
+
+#checkbox {
+margin-right: 10px; /* Espacio entre el checkbox y el select */
+}
+
+#select {
+background-color: #e9e9e9; /* Fondo gris para indicar que está deshabilitado */
+border: 1px solid #ccc; /* Borde gris */
+color: #888; /* Texto en gris */
+pointer-events: none; /* Deshabilita eventos en el select */
+cursor: not-allowed; /* Cambia el cursor a "no permitido" */
+}
+
+.linea {
+    text-align: right; /* Alinea el contenido a la derecha */
+}
+
+hr.custom-line {
+    background-color: #000; /* Color de fondo (en este caso, negro) */
+    height: 2px; /* Altura de la línea */
+    border: none; /* Sin borde */
+    width: 80%;
+    margin-left: 1px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-left {
+    text-align: left;
+    flex-grow: 1; /* Esto hará que ocupe todo el espacio disponible */
+    align-items: center;
+    display: flex; /* Esto permite centrar verticalmente el contenido */
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .footer-right {
+    text-align: right;
+    align-items: center;
+    display: flex; /* Esto permite centrar verticalmente el contenido */
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }

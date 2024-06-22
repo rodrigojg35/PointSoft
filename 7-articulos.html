@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="icon" href="imagenes/logo3.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/7-articulos.css" />
+</head>
+<body>
+<header>
+        <br><br><br>
+        <div class="left-section">
+            <a href="4-panel.html">
+                <button class="boton-regresar">Regresar</button>
+            </a>
+        </div>
+        <div class="center-section">
+            <h1>Panel de Productos</h1>
+        </div>
+        <div class="right-section">
+            <button class="boton-añadir-producto" onclick="añadirProducto()"><i class="fas fa-tags"></i>&nbsp;&nbsp;Añadir producto</button>
+        </div>
+
+        <br><br><br>
+    </header>
+
+    <!-- Resto del código -->
+
+    <div class="modal fade" id="panel-articulo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content" id="panel-ver-producto">
+            
+            <div class="modal-header" style="border-bottom: 1px solid #000;">
+              <h5 class="modal-title" id="exampleModalLabel">Detalles del Producto</h5>
+              
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+
+            <div class="modal-body" style="border-bottom: 1px solid #000;">
+              <div class="container">
+                <div class="row">
+                  <!-- Imagen a la izquierda -->
+                  <div class="col-md-6" style="border-right: 1px solid #000; width: 47%" id="panelprod-img">
+                    <img src="imagenes/Estructura.jpg" alt="Producto" class="imagen-producto" >
+                  </div>
+                  <!-- Información a la derecha -->
+                  <div class="col-md-6 producto-body">
+                    <div class="nombre-producto-detalles" style="margin-bottom: 5px;">Prueba de Producto #300</div>
+                    <div class="sku" style="margin-bottom: 10px;">SKU: SKU 5571</div>
+                    <ul style="list-style: none; padding: 0;">
+                      <div class="precio"><span style="color: #000;">Precio:</span> <span style="color: #333;">$700 MXN</span></div>
+                      <div class="precio" style="margin-bottom: 10px;"><span style="color: #000;">Disponibilidad:</span> <span style="color:green;">Disponible</span> </div>
+                      
+                      <div class="precio" ><span style="color: #000;">Tamaño:</span> <span style="color: #333;">5 cartas</span></div>
+                      <div class="precio" style="margin-bottom: 10px;"><span style="color: #000;">Lanzamiento:</span> <span style="color: #333;">15 Mayo 2012</span></div>
+
+                      <div class="precio" ><span style="color: #000;">Preventa:</span> <span style="color: red;">No disponible</span></div>
+                    </ul>
+                    
+                    
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+                <ul style="list-style: none; padding: 0;">
+                  <div class="modal-desc" style="margin-bottom: 10px;"><span style="color: #000;">Descripción:</div>
+
+                  <div class="descripcion-articulo-body" style="margin-bottom: 5px;">
+                    Structure Deck: Cyber Strike enhances both of Zane Truesdale’s strategies from the Yu-Gi-Oh! GX anime! This is one of the most customizable Structure Decks yet.
+                  </div>
+                  <div class="descripcion-articulo-body">
+                    Cyber Dragons!
+                  You can fuse together multiple copies of Cyber Dragon with Power Bond to create Zane’s signature Cyber End Dragon and raise its ATK all the way to 8000! It’s easier than ever thanks to a brand-new monster that can add Power Bond from your Deck and let you use monsters in your Graveyard as Fusion Materials for it.
+
+
+                  </div>
+                </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+    <div class="productos-container" id="contenedor-productos">  </div>
+    <div class="modal fade" id="añadir-articulo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header" style="border-bottom: 1px solid #000;">
+                  <h5 class="modal-title" id="exampleModalLabel">Añadir información de nuevo producto</h5>
+                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" >
+                  <form method="POST">
+                      <!-- Tu formulario actual aquí -->
+                      <label for="nombre">Ingresar nombre de producto:</label>
+                      <input type="text" id="form-nombre" name="nombre" required>
+                      
+                      <label for="precio">Precio:</label>
+                      <input type="tel" id="form-precio" name="precio" required>
+
+                      <label for="nombre">Descripción:</label>
+                      <input type="text" id="form-descr" name="descripcion" required>
+
+                      <div>
+                        <span>Cantidad: </span> 
+                        <input type="number" id="form-cantidad" name="cantidad" min="1" max="100000" value="1">
+                      </div><br>
+
+  
+                      <div style="display: flex">
+                        <label for="direccion">Por pedido:</label>
+                        <input type="checkbox" id="checkbox" style="width: 8% ;height: 18px; margin-top: 3.5px;">
+                      </div>
+
+                      <div style="display: flex">
+                        <label for="imagen">Imagen del Producto: (Opcional)</label>
+                        <input type="file" name="imagen" id="form-imagen" accept=".jpg, .png" required>
+                      </div>
+                      <br>
+  
+                      <input type="button" value="Añadir nuevo producto" onclick="trySubirProducto()">
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <div class="modal fade" id="modificar-articulo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="border-bottom: 1px solid #000;">
+                <h5 class="modal-title" id="exampleModalLabel">Modificar información de producto</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" >
+                <form method="POST">
+                    <!-- Tu formulario actual aquí -->
+                    <label for="nombre">Nombre de producto:</label>
+                    <input type="text" id="modify-nombre" name="nombre" required>
+                    
+                    <label for="precio">Precio:</label>
+                    <input type="tel" id="modify-precio" name="precio" required>
+
+                    <label for="nombre">Descripción:</label>
+                    <input type="text" id="modify-descr" name="descripcion" required>
+
+                    <div>
+                      <span>Cantidad: </span> 
+                      <input type="number" id="modify-cantidad" name="cantidad" min="1" max="100000" value="1">
+                    </div><br>
+
+
+                    <div style="display: flex">
+                      <label for="direccion">Por pedido:</label>
+                      <input type="checkbox" id="modify-checkbox" style="width: 8% ;height: 18px; margin-top: 3.5px;">
+                    </div>
+
+            
+                    <label style="color:gray; margin-top: 5px;">Los datos del producto se actualizarán</label>
+                    <div id="modify-boton"></div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="modal fade" id="mensajeEmergenteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="border: 2px solid red;">
+      <div class="modal-content">
+        <div class="modal-body" id="mensaje-confirmacion">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <br><br>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="DataTables/jquery-3.7.0.js"></script>
+    <script src="js/7-articulos.js"></script>
+</body>
+</html>

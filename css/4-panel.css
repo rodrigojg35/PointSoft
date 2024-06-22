@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #090661, #f02a93);
+    color: white; 
+    
+    margin: 0;
+    padding: 0;
+}
+
+.modal-content {
+    color: black; /* Color de texto negro */
+    text-shadow: none; /* Sin sombra de texto */
+}
+
+h1 {
+    text-align: center; /* Alinea el título al centro */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h2 {
+    text-align: center; /* Alinea el título al centro */
+    font-family: "Segoe UI";
+    font-size: 33px;
+    color:#333;
+
+}
+
+header {
+    background: linear-gradient(to right, #a7266b, #030134);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+    display: flex; /* Usar un diseño flexbox para las secciones */
+    justify-content: space-between; /* Distribuir las secciones a lo largo del encabezado */
+}
+
+/* Estilos para la sección izquierda (botón Cerrar Sesión) */
+.left-section {
+    flex: 1; /* Ocupa todo el espacio disponible en la izquierda */
+}
+
+/* Estilos para el botón Cerrar Sesión */
+.boton-regresar {
+    background-color: black; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 10px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+/* Estilos para la sección central (título) */
+.center-section {
+    flex: 1; /* Ocupa todo el espacio disponible en el centro */
+    text-align: center; /* Centrar el contenido */
+    margin-left: 60px;
+}
+
+/* Estilos para el título */
+h1 {
+    margin: 0; /* Elimina el margen superior del título */
+}
+
+/* Estilos para la sección derecha (botón Abrir Caja) */
+.right-section {
+    flex: 1; /* Ocupa todo el espacio disponible en la derecha */
+    text-align: left; /* Alinear el contenido a la derecha */
+    margin-left: 10px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#miModal .modal-body  {
+    font-size: 30px; /* Ajusta el tamaño del texto según tus preferencias */
+  }
+
+  #miModal2 .modal-body  {
+    font-size: 20px; /* Ajusta el tamaño del texto según tus preferencias */
+  }
+
+/* Estilos para el botón Abrir Caja */
+.boton-abrir-caja {
+    background-color: green; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 10px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.boton-abrir-caja:hover {
+    cursor: default;
+}
+
+.boton-activado {
+    transform: translateY(2px); /* Mover ligeramente hacia abajo al presionar */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra al presionar */
+    background-color: #e0e0e0; /* Cambiar el color de fondo al presionar */
+    border-color: #c0c0c0; /* Cambiar el color del borde al presionar */
+    color: #333; /* Cambiar el color del texto al presionar */
+}
+
+.boton-activado:hover {
+    cursor: pointer;
+}
+
+.datos-caja{
+    display: block; 
+    margin-right: 30px;
+}
+.datos-de-caja {
+    margin-bottom: 2px;
+}
+
+/* Estilos para el ícono de la caja registradora */
+i.fas.fa-cash-register {
+    margin-right: 5px; /* Margen derecho entre el ícono y el texto del botón */
+}
+
+
+
+
+.boton-carrito {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 12px;
+}
+.empleado-number {
+    font-size: 36px;
+    text-align: center; /* Alinea el título al centro */
+}
+
+.panel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+}
+
+.botones-panel{
+    text-decoration: none; /* Elimina el subrayado */
+    color: #000; /* Cambia el color de las letras */
+    width: 45%; /* Ancho reducido para acomodar dos botones en una fila */
+    padding: 10px; /* Ajusta el padding para reducir el tamaño vertical */
+    margin: 10px; /* Ajusta el margen para separarlos un poco más */
+    border: 3px solid #ccc;
+    transition: all 0.3s;
+    text-align: center; /* Alinea el texto al centro */
+    background: lightcyan; /* Fondo gris claro */
+    border-radius: 6px; /* Borde redondeado */
+}
+
+.botones-panel:hover {
+    
+    color: #00f; /* Cambia el color al pasar el mouse */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.botones-panel.panel-desactivado {
+    background-color: #a5a4a4;
+    border: 3px solid #a7a7a7;
+    cursor: default;
+}
+
+.botones-panel.panel-desactivado:hover {
+    color: inherit; /* Mantiene el color original durante el hover */
+    transform: none; /* Elimina cualquier transformación durante el hover */
+    box-shadow: none; /* Elimina la sombra durante el hover */
+}
+
+.panel a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #000; /* Cambia el color de las letras */
+    width: 45%; /* Ancho reducido para acomodar dos botones en una fila */
+    padding: 10px; /* Ajusta el padding para reducir el tamaño vertical */
+    margin: 10px; /* Ajusta el margen para separarlos un poco más */
+    border: 3px solid #ccc;
+    transition: all 0.3s;
+    text-align: center; /* Alinea el texto al centro */
+    background: lightcyan; /* Fondo gris claro */
+    border-radius: 6px; /* Borde redondeado */
+}
+
+.panel a:hover {
+    
+    color: #00f; /* Cambia el color al pasar el mouse */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.panel a.panel-desactivado {
+    background-color: #ccc;
+    cursor: default;
+}
+
+.panel a.panel-desactivado:hover {
+    color: inherit; /* Mantiene el color original durante el hover */
+    transform: none; /* Elimina cualquier transformación durante el hover */
+    box-shadow: none; /* Elimina la sombra durante el hover */
+}
+
+.icon {
+    font-size: 48px;
+}

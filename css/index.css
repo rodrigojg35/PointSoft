@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #010025, #FF1493);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 130px;
+}
+
+h1 {
+    font-size: 130px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-shadow: -3px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h2 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.boton {
+    background: linear-gradient(to bottom right, #FFD700, #daa520);
+    color: rgb(34, 18, 83);
+    border: 3px solid #FFD700; /* Borde amarillo dorado de 3px */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+
+    margin: 10px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 25px; /* Hace que los botones sean redondos pero no completamente circulares */
+
+}
+
+.boton:hover {
+    background: linear-gradient(to bottom right, #daa520, #FFD700); /* Gradiente invertido al pasar el mouse */
+    border-color: #daa520; /* Cambia el color del borde al pasar el mouse */
+}
+
+.botones-container {
+    display: flex;
+}

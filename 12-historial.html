@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <link rel="stylesheet" href="DataTables/datatables.css" />
+    <script src="DataTables/datatables.js"></script>
+
+    <script src="DataTables/jquery-3.7.0.js"></script>
+    <script src="DataTables/jquery.dataTables.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/12-historial.css" />
+
+    <title>Panel de Historial</title>
+
+</head>
+<body>
+
+<header>
+        <br><br><br>
+        <div class="left-section">
+            <a href="4-panel.html">
+                <button class="boton-regresar">Regresar</button>
+            </a>
+        </div>
+        <div class="center-section">
+            <h1>Historial</h1>
+        </div>
+        <div class="right-section">
+            
+        </div>
+        <br><br><br>
+    </header>
+    
+    <div id="div-preventas" class="tabla" style="margin-top: 30px; width:80%;">
+      
+      <div style="display: flex; margin-bottom: 10px;">
+
+          <div style="margin-left: 43%;"><h2>Pedidos</h2></div>
+          
+      
+          <div style="margin-left: 25%; margin-top: 10px;">
+
+          <select name="mes" id="mes-preventa" style="margin-right: 10px; height: 30px;">
+
+            <option value="12">Diciembre</option>
+            <option value="11">Noviembre</option>
+            <option value="10">Octubre</option>
+            <option value="09">Septiembre</option>
+            <option value="08">Agosto</option>
+            <option value="07">Julio</option>
+            <option value="06" selected>Junio</option>
+            <option value="05">Mayo</option>
+            <option value="04">Abril</option>
+            <option value="03">Marzo</option>
+            <option value="02">Febrero</option>
+            <option value="01">Enero</option>
+          </select>
+      
+          <select name="año" id="año" style="height: 30px;">
+            <option value="2024">2024</option>
+          </select>
+
+        </div>
+
+      </div>
+
+      <br>
+
+      <div id="div-tablapreventa">      </div>
+
+    </div>
+
+    <br>
+
+    <div id="div-ventas" class="tabla" style="margin-top: 30px; width:80%;">
+      
+      <div style="display: flex; margin-bottom: 10px;">
+
+          <div style="margin-left: 47%;"><h2>Ventas</h2></div>
+          
+      
+          <div style="margin-left: 25%; margin-top: 10px;">
+
+          <select name="mes" id="mes-venta" style="margin-right: 10px; height: 30px;">
+
+            <option value="12">Diciembre</option>
+            <option value="11">Noviembre</option>
+            <option value="10">Octubre</option>
+            <option value="09">Septiembre</option>
+            <option value="08">Agosto</option>
+            <option value="07">Julio</option>
+            <option value="06" selected>Junio</option>
+            <option value="05">Mayo</option>
+            <option value="04">Abril</option>
+            <option value="03">Marzo</option>
+            <option value="02">Febrero</option>
+            <option value="01">Enero</option>
+          </select>
+      
+          <select name="año" id="año" style="height: 30px;">
+            <option value="2024">2024</option>
+          </select>
+
+        </div>
+
+      </div>
+
+      <br>
+
+      <div id="div-tablaventa">      </div>
+      
+
+    </div>
+
+    <div id="div-cajas" class="tabla" style="margin-top: 30px; width:80%;">
+      
+      <div style="display: flex; margin-bottom: 10px;">
+
+          <div style="margin-left: 43%;"><h2>Cierres de Caja</h2></div>
+          
+      
+          <div style="display: flex ;margin-left: 27%; margin-top: 50px;">
+
+          <select name="mes" id="mes-caja" style="margin-right: 10px; height: 30px;">
+
+            <option value="12">Diciembre</option>
+            <option value="11">Noviembre</option>
+            <option value="10">Octubre</option>
+            <option value="09">Septiembre</option>
+            <option value="08">Agosto</option>
+            <option value="07">Julio</option>
+            <option value="06" selected>Junio</option>
+            <option value="05">Mayo</option>
+            <option value="04">Abril</option>
+            <option value="03">Marzo</option>
+            <option value="02">Febrero</option>
+            <option value="01">Enero</option>
+          </select>
+      
+          <select name="año" id="año" style="height: 30px;">
+            <option value="2024">2024</option>
+          </select>
+
+        </div>
+
+      </div>
+
+      <br>
+
+      <div id="div-tablacaja">      </div>
+      
+    </div>
+
+
+
+        <br><br>
+        
+        <script src="js/12-historial.js"></script>
+</body>
+</html>

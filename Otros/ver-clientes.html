@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Panel de Empleados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: gray;
+            background: linear-gradient(45deg, transparent 25%, rgba(173, 216, 230, 0.9) 25%, rgba(173, 216, 230, 0.4) 50%, transparent 50%, transparent 75%, rgba(173, 216, 230, 0.4) 75%, rgba(173, 216, 230, 0.4));
+            background-size: 200px 800px;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        header {
+            background-color: #333333;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .boton-regresar {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+
+        .boton-carrito {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            padding: 10px 12px;
+        }
+        .empleado-number {
+            font-size: 36px;
+            text-align: center;
+        }
+        .panel {
+            display: flex;
+            justify-content: space-between;
+        }
+        .box {
+            width: 20%;
+            padding: 10px;
+            margin-top: 20px;
+            border: 2px solid #ccc;
+            transition: all 0.3s;
+        }
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .icon {
+            font-size: 48px;
+        }
+
+        .contenido {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .formulario {
+            width: 50%; /* Agrandado al 50% del ancho del body */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .tabla {
+            width: 48%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .empleado-number {
+            font-size: 36px;
+        }
+
+        .icon {
+            font-size: 48px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <button class="boton-regresar">Regresar</button>
+        
+        <button class="boton-carrito"><i class="fa fa-shopping-cart"></i></button>
+    </header><br>
+
+    <h1 class="empleado-number">Clientes</h1>
+    
+     <div class="contenido">
+        <div class="formulario">
+            <h2>Añadir cliente</h2>
+            <form>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre"><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}"><br>
+
+                <label for="correo">Correo:</label><br>
+                <input type="email" id="correo" name="correo"><br>
+
+                <label for="usuario">Nombre de usuario:</label><br>
+                <input type="text" id="usuario" name="usuario"><br>
+
+                <label for="sucursal">Sucursal:</label><br>
+                <select id="sucursal" name="sucursal">
+                    <option value="Sucursal 1">Sucursal 1</option>
+                    <option value="Sucursal 2">Sucursal 2</option>
+                </select><br>
+
+                <input type="submit" value="Guardar">
+            </form>
+        </div>
+        
+        <div class="tabla">
+            <table>
+                <tr>
+                    <th>No. Cliente</th>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Correo</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Cliente 1</td>
+                    <td>1234567890</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Cliente 2</td>
+                    <td>9876543210</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Cliente 3</td>
+                    <td>5555555555</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

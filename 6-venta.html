@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="icon" href="imagenes/logo3.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="DataTables/jquery-3.7.0.js"></script>
+
+    <link rel="stylesheet" href="css/6-venta.css" />
+
+    <title>Generar nueva Venta</title>
+
+</head>
+<body>
+
+        
+<header>
+        <br><br><br>
+        <div class="left-section">
+            <a href="4-panel.html">
+                <button class="boton-regresar">Regresar</button>
+            </a>
+        </div>
+        <div class="center-section">
+            <h1>Nueva Venta</h1>
+        </div>
+        <div class="right-section">
+
+        </div>
+        <br><br><br>
+    </header>
+
+    <div id="paneles">
+        <div id="panel-izquierdo">
+        <form method="POST" class="formulario">
+        
+        <label for="direccion">Seleccionar Pedido (sí aplica)</label>
+        <div style="display: flex;">
+            <input type="checkbox" id="checkbox-preventa" class="checkbox-preventa" style="margin-right: 10px;" style="width: 8% ;height: 18px;">
+            <div id="elemento-select-preventa">
+                <select id="select-preventa" class="select-deshabilitado" style="width: 110%; height: 30px;">
+                    <option value="" disabled selected>Seleccionar pedido</option>
+                </select><br><br>
+                
+            </div>
+        </div>
+        
+        <div id="boton-añadir-preventa">
+            <input type="button" class="boton-añadir" style="margin-top: -5px;" onclick="trySelectPreventa()" value="Añadir pedido"><br><br>
+        </div>
+
+        <div class="linea"><hr class="custom-line" style="margin-top: 0px;"></div>
+
+        <label for="direccion">Seleccionar Producto:</label>
+        <select id="barra-elegir-producto" name="producto" style="width: 80%;height: 30px;" required>
+            <option value="" disabled selected>Selecciona un producto</option>
+        </select><div id="show-cantidad"></div><div id="input-cantidad"></div><br>
+    
+        <div class="existencia" style="margin-top: -10px; margin-bottom: -10px;">
+            <span style="color: #000;">Cantidad: </span> 
+            <input type="number" id="contenedor-cant-producto" name="cantidad" min="1" max="100" value="1">
+        </div>
+        <br>
+
+        <input type="button" class="boton-añadir" style="margin-top: -5px;" onclick="trySelectProducto()" value="Añadir producto"><br><br>
+
+        <div class="linea"><hr class="custom-line" style="margin-top: 0px;"></div>
+       
+
+        <label for="direccion">Tipo de Pago:</label>
+        <select id="tipo-pago-producto" name="producto" style="width: 80%;height: 30px;" required>
+            <option value="" disabled selected>Seleccionar tipo de pago</option>
+            <option value="C">Efectivo</option>
+            <option value="T">Transferencia</option>
+            
+        </select><br><br>
+
+        <label for="nom">Nombre de Cliente:</label>
+
+        <input type="text" id="nom" name="nom" required>
+
+
+        <label for="tel">Telefono del Cliente:</label>
+
+        <input type="tel" id="tel" name="tel" required>
+  
+
+        <label for="email">Correo electrónico del Cliente:</label>
+
+        <input type="email" id="email" name="email" required>
+
+        <div class="linea"><hr class="custom-line" style="margin-top: 0px;"></div>
+
+        <div id="form-fechahora"></div>
+
+        <input type="button" class="boton-generar-venta" style="margin-top: 7px;" onclick="trySubirVenta()" value="Generar Venta"><br>
+    </form>
+        </div>
+
+        <div id="panel-derecho">
+        <form action="" method="POST" class="formulario">
+        <label for="direccion"><span style="font-size: 30px; ">Artículos</span></label>
+
+        <div class="linea"><hr class="custom-line" style="margin-bottom: 15px;"></div>
+        
+        <div id="cargar-articulo-preventa">
+            
+            Sin Pedido
+
+        </div>
+        
+        <div class="linea"><hr class="custom-line" style="margin-bottom: 15px;"></div>
+
+            <u style="text-decoration-line: none;">
+
+                <div id="lista-productos-elegidos">
+                    Aún no hay artículos<br>
+                </div>
+            </u>
+     
+
+        <div class="linea"><hr class="custom-line"  style="margin-top:  15px; margin-bottom: 15px;"></div>
+
+        <div style="font-size: 20px;" id="imprimir-total-transaccion">Total: <span style="color: green; font-weight: bold;">$0 MXN</span></div>
+
+
+        </form>
+
+       
+        </div>
+    </div>
+
+    <br>
+    
+
+        <br><br><br>
+
+        <br><br>
+
+        <div class="modal fade" id="confirmacion-venta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: 1px solid #000;">
+                        <h5 class="modal-title" id="exampleModalLabel">Confirmar información Venta</h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="border-bottom: 1px solid #000;">
+                        <form method="POST">
+                            <!-- Tu formulario actual aquí -->
+                            <div id="print-datos-confirm">
+                            </div>
+    
+                        </form>
+                    </div>
+    
+                    <div class="footer-left" class="modal-footer" >
+                        <div class="footer-left" id="print-total">
+                        </div>
+                        <div class="footer-right" id="boton-subir-datos-preventa">
+                            
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal" tabindex="-1" role="dialog" id="Modal-para-comprobante">
+            <div class="modal-dialog" role="document" style="border: 2px solid red;">
+              <div class="modal-content">
+                <div class="modal-header" >
+                    <h5 class="modal-title" >Transacción realizada con éxito</h5>
+                  
+                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="enlace-comprobante" style="text-align: center;">
+              
+                </div>
+                <div class="modal-footer">
+            
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="modal fade" id="mensajeEmergenteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body" id="mensaje-confirmacion">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+          <script src="DataTables/jquery-3.7.0.js"></script>
+        <script src="js/9-venta.js"></script>
+</body>
+</html>
